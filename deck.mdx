@@ -1,4 +1,7 @@
 import { Image, Split, themes } from "mdx-deck"
+import prPageNoChecks from "./images/pr-page-no-checks.png"
+import prPageChecks from "./images/pr-page-with-checks.png"
+import prFail from "./images/pr-fail.png"
 
 export const theme = themes.code
 
@@ -16,60 +19,82 @@ export const theme = themes.code
 
 ---
 
-## Process
+## DevOps Process
 
-1. Create branch
-2. Push code
-3. Automatically create pull request
-4. Automatically run status checks
-5. Merge code
+1. Create Pull Request
+2. Code Quality Control and Reports
+3. Merge Code and Deploy
 
 ---
 
-## Create branch
+## Background Concepts
 
-- Use Gitflow model
+- Git branching model
 
-<Image
-  src="https://miro.medium.com/max/700/1*uUpzVOpdFw5V-tJ_YvgFmA.png"
-  height={500}
-  width={900}
-/>
+<Split style={{ textAlign: "left", height: "auto" }}>
+<center style={{ marginRight: "100px"}}>
+  <Image
+    src="https://nvie.com/img/main-branches@2x.png"
+    height={402}
+    width={267}
+  />
+</center>
 
----
 
-## Push code
+<center>
+  <Image src="https://nvie.com/img/fb@2x.png" height={357} width={133} />
+</center>
 
-- Save code
-- Push to GitHub
+</Split>
 
----
-
-## Pull requests
-
-- Opened automatically via GitHub Actions
 
 ---
 
-## Status checks
+## Background Concepts
+
+- Pull requests
+
+<Image src={prPageNoChecks} height={600} width={620} />
+
+---
+
+## Code Quality Control
 
 All of these run automatically:
 
 - Linter
-- Unit tests
+- Unit tests (with coverage)
 - Build
 - Visual testing (frontend)
 - Performance testing (frontend)
-- Code Climate
-- Code Coverage
+- Code quality control checks
 
 ---
 
-## Merge code
+## Status Checks
+
+<Image src={prPageChecks} height={1000} width={600} />
+
+---
+
+## Failed Checks
+
+<Image src={prFail} height={304} width={600} />
+
+---
+
+## Merge Code
 
 - Wait for status checks to pass
 - Merge to `develop`
 - Automerge minor library updates
+
+---
+
+# Deployment
+
+- Automated: staging and prod
+- Interactive: development
 
 ---
 

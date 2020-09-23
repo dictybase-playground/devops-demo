@@ -1,9 +1,111 @@
-# Hello
+import { Image, Split, themes } from "mdx-deck"
+
+export const theme = themes.code
+
+# DevOps at dictyBase
 
 ---
 
-## This is my deck
+### Automate all the things!
+
+<Image
+  src="https://media0.giphy.com/media/1nR6fu93A17vWZbO9c/giphy.gif?cid=ecf05e471ltadedv5lb2jagb6c5ar91zqbxt6fbt5xweqfu5&rid=giphy.gif"
+  height={450}
+  width={710}
+/>
+
+---
+
+## Process
+
+1. Create branch
+2. Push code
+3. Automatically create pull request
+4. Automatically run status checks
+5. Merge code
+
+---
+
+## Create branch
+
+Explain `develop` branch and show a gitflow diagram.
+
+---
+
+## Push code
+
+- Save code
+- Push to GitHub
+
+---
+
+## Pull requests
+
+- Opened automatically via GitHub Actions
+
+---
+
+## Status checks
+
+All of these run automatically:
+
+- Linter
+- Unit tests
+- Build
+- Visual testing (frontend)
+- Performance testing (frontend)
+- Code Climate
+- Code Coverage
+
+---
+
+## Merge code
+
+- Wait for status checks to pass
+- Merge to `develop`
+- Automerge minor library updates
+
+---
+
+## New: ChatOps!
+
+- `/deploy` command
+
+---
+
+## /deploy
+
+Triggered from comments inside:
+
+- Pull requests
+- Issues
+
+---
+
+## Pull request example
+
+- `/deploy cluster=erickube`
+- `/deploy cluster=erickube commit=abc`
+
+---
+
+## Issue example
+
+- `/deploy cluster=siddkube branch=develop`
+- `/deploy cluster=siddkube commit=xyz`
+
+---
+
+## Prod and staging
+
+- Automatically deployed using GitHub Actions
 
 ---
 
 ## The End
+
+<Image
+  src="https://media0.giphy.com/media/4TtTVTmBoXp8txRU0C/giphy.gif?cid=ecf05e471ltadedv5lb2jagb6c5ar91zqbxt6fbt5xweqfu5&rid=giphy.gif"
+  height={379}
+  width={710}
+/>

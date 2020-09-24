@@ -2,6 +2,9 @@ import { Image, Split, themes } from "mdx-deck"
 import prPageNoChecks from "./images/pr-page-no-checks.png"
 import prPageChecks from "./images/pr-page-with-checks.png"
 import prFail from "./images/pr-fail.png"
+import automerge from "./images/automerge-commits.png"
+import prDeploy from "./images/pr-deploy.png"
+import issueDeploy from "./images/issue-deploy.png"
 
 export const theme = themes.code
 
@@ -54,7 +57,7 @@ export const theme = themes.code
 
 - Pull requests
 
-<Image src={prPageNoChecks} height={600} width={620} />
+<img src={prPageNoChecks} style={{ height: "60%" }} />
 
 ---
 
@@ -63,17 +66,18 @@ export const theme = themes.code
 All of these run automatically:
 
 - Linter
-- Unit tests (with coverage)
+- Unit tests (with code coverage)
 - Build
 - Visual testing (frontend)
 - Performance testing (frontend)
 - Code quality control checks
+- Security scanning
 
 ---
 
 ## Status Checks
 
-<Image src={prPageChecks} height={1000} width={600} />
+<img src={prPageChecks} style={{ height: "70%" }} />
 
 ---
 
@@ -83,11 +87,9 @@ All of these run automatically:
 
 ---
 
-## Merge Code
+## Automated Merging
 
-- Wait for status checks to pass
-- Merge to `develop`
-- Automerge minor library updates
+<Image src={automerge} height={177} width={600} />
 
 ---
 
@@ -98,15 +100,15 @@ All of these run automatically:
 
 ---
 
-## New: ChatOps!
+## Interactive Deployment
 
-- `/deploy` command
+- /deploy command (ChatOps)
 
 ---
 
 ## /deploy
 
-Triggered from comments inside:
+Deployments are triggered from comments inside:
 
 - Pull requests
 - Issues
@@ -118,6 +120,8 @@ Triggered from comments inside:
 - `/deploy cluster=erickube`
 - `/deploy cluster=erickube commit=abc`
 
+<Image src={prDeploy} width={600} height={146} />
+
 ---
 
 ## Issue example
@@ -125,11 +129,7 @@ Triggered from comments inside:
 - `/deploy cluster=siddkube branch=develop`
 - `/deploy cluster=siddkube commit=xyz`
 
----
-
-## Prod and staging
-
-- Automatically deployed using GitHub Actions
+<Image src={issueDeploy} width={600} height={92} />
 
 ---
 
